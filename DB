@@ -1,0 +1,114 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.0.22-community-nt
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema smartrecom
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ smartrecom;
+USE smartrecom;
+
+--
+-- Table structure for table `smartrecom`.`registerinfo`
+--
+
+DROP TABLE IF EXISTS `registerinfo`;
+CREATE TABLE `registerinfo` (
+  `name` varchar(45) NOT NULL default '',
+  `gen` varchar(45) NOT NULL default '',
+  `doob` varchar(45) NOT NULL default '',
+  `address` varchar(45) NOT NULL default '',
+  `emailid` varchar(45) NOT NULL default '',
+  `mobile` varchar(45) NOT NULL default '',
+  `userid` varchar(45) NOT NULL default '',
+  `password` varchar(45) NOT NULL default '',
+  PRIMARY KEY  (`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `smartrecom`.`registerinfo`
+--
+
+/*!40000 ALTER TABLE `registerinfo` DISABLE KEYS */;
+INSERT INTO `registerinfo` (`name`,`gen`,`doob`,`address`,`emailid`,`mobile`,`userid`,`password`) VALUES 
+ ('jiten','Male','11/12/1999',' Pune','jiten@123.com','9988775566','jiten','Jiten@123');
+/*!40000 ALTER TABLE `registerinfo` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `smartrecom`.`resultinfo`
+--
+
+DROP TABLE IF EXISTS `resultinfo`;
+CREATE TABLE `resultinfo` (
+  `username` varchar(45) NOT NULL default '',
+  `result` varchar(1000) NOT NULL default '',
+  `datetime` varchar(45) NOT NULL default ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `smartrecom`.`resultinfo`
+--
+
+/*!40000 ALTER TABLE `resultinfo` DISABLE KEYS */;
+INSERT INTO `resultinfo` (`username`,`result`,`datetime`) VALUES 
+ ('','Product Recommendation for mouse from system is Meduim','09-05-2022--3:18:1 PM'),
+ ('','There are no Recommendation for headphones  But you can try the following product ,spy camera,smart watch,oivo ps4','09-05-2022--3:33:10 PM'),
+ ('','There are no Recommendation for keyboard  But you can try the following product ,spy camera,smart watch,oivo ps4','09-05-2022--3:33:25 PM'),
+ ('','Product Recommendation for mouse from system is Meduim','09-05-2022--3:33:35 PM'),
+ ('','Product Recommendation for smart watch from system is Low','09-05-2022--3:33:57 PM'),
+ ('','Product Recommendation for mouse from system is Meduim','09-05-2022--3:40:51 PM'),
+ ('jiten','Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...','09-05-2022--4:55:28 PM'),
+ ('','Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...','09-05-2022--4:56:4 PM');
+INSERT INTO `resultinfo` (`username`,`result`,`datetime`) VALUES 
+ ('','Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...','09-05-2022--4:56:36 PM'),
+ ('jiten','Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...','09-05-2022--4:57:14 PM');
+INSERT INTO `resultinfo` (`username`,`result`,`datetime`) VALUES 
+ ('','Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \n\n\n \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...','09-05-2022--4:57:56 PM'),
+ ('jiten','Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \n \n \n \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...','09-05-2022--5:0:37 PM');
+INSERT INTO `resultinfo` (`username`,`result`,`datetime`) VALUES 
+ ('jiten','Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \n \n \n \n \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\n \nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\n \nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...','09-05-2022--5:9:9 PM'),
+ ('jiten','Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \n \n \n \n \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\n \nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\n \nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...','09-05-2022--7:42:55 PM');
+INSERT INTO `resultinfo` (`username`,`result`,`datetime`) VALUES 
+ ('jiten','Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \n \n \n \n \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\n \nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\n \nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...','10-05-2022--10:23:40 AM');
+/*!40000 ALTER TABLE `resultinfo` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `smartrecom`.`results`
+--
+
+DROP TABLE IF EXISTS `results`;
+CREATE TABLE `results` (
+  `results` varchar(3000) NOT NULL default ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `smartrecom`.`results`
+--
+
+/*!40000 ALTER TABLE `results` DISABLE KEYS */;
+INSERT INTO `results` (`results`) VALUES 
+ ('Product Recommendation for mouse from system is Meduim and the below are the some recommended products links \n \n \n \n \nhttps://www.amazon.com/gp/customer-reviews/rgm45a65sj195/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r17ginxr39nlej/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r13rk0m58gaoj/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r17h1c697xjcjo/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r1seubp98vsany/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/r1aqrii6jcybam/ref=cm_cr_arp_...\n \nhttps://www.amazon.com/gp/customer-reviews/rv9zb1kafdyoa/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/ribb4ozh62wsy/ref=cm_cr_arp_d...\n \nhttps://www.amazon.com/gp/customer-reviews/r1pjllvccz5f2x/ref=cm_cr_arp_...\n \nhttps://www.amazon.in/gp/customer-reviews/rvfb64v0amlyi?asin=b07srw3mcm\n \nhttps://www.amazon.com/gp/customer-reviews/r29jcuekphebqm/ref=cm_cr_arp_...');
+/*!40000 ALTER TABLE `results` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
